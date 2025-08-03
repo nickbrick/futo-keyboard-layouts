@@ -1,18 +1,19 @@
 name: Modern
 languages: el
 rows:
-  - letters: # rowkeys_greek1.xml
-    - [';', '%', ':', '·']
-    - ['ς']
+  - letters:
+    -  {type: case, normal: [';', '%', ':', '·'], shiftLocked: [';', '%', ':', '·'], shiftedManually: [':', '%', ';', '·']}
+    # ̈́  Combining Greek Dialytika Tonos (U+0344)
+    -  {type: case, normal: 'ς', shiftLocked: 'Σ', shiftedManually: "\u0344"}
     - ['ε', '%', 'έ']
     - ['ρ']
     - ['τ']
     - ['υ', '%', 'ύ', 'ϋ', 'ΰ']
     - ['θ']
     - ['ι', '%', 'ί', 'ϊ', 'ΐ']
-    - ['ο', 'ό']
+    - ['ο', '%', 'ό']
     - ['π']
-  - letters: # rowkeys_greek2.xml
+  - letters:
     - ['α', '%', 'ά']
     - ['σ']
     - ['δ']
@@ -20,9 +21,12 @@ rows:
     - ['γ']
     - ['η', '%', 'ή']
     - ['ξ']
-    - ['κ']
-    - ['λ']
-  - letters: # rowkeys_greek3.xml
+    - ['κ', '%', '«']
+    - ['λ', '%', '»']
+    # ́  Combining Acute Accent (U+0301)
+    # ̈  Combining Diaeresis (U+0308)
+    - {type: case, normal: "\u0301", shiftLocked: "\u0301", shiftedManually: "\u0308"}
+  - letters:
     - ['ζ']
     - ['χ']
     - ['ψ']
@@ -30,4 +34,3 @@ rows:
     - ['β']
     - ['ν']
     - ['μ']
-# detected 3 rows
