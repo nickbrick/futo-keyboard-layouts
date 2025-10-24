@@ -141,8 +141,9 @@ languages:
     - pcqwerty
     - nordic
   el:
-    - modern
-    - polytonic
+    - greek
+    - greek_modern
+    - greek_hoplite_polytonic
     - qwerty
     - qwertz
     - dvorak
